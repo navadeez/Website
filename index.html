@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Radiant Labels & Packaging</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+:root {
+  --primary:#e30613;--dark:#222;--gray:#666;--light:#f7f7f7;
+}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,Arial,sans-serif;}
+body{color:var(--dark);line-height:1.6;}
+section{padding:70px 8%;}
+h2{font-size:2.2rem;margin-bottom:20px;}
+p{color:var(--gray);max-width:900px;}
+header{background:#fff;padding:20px 8%;border-bottom:1px solid #eee;display:flex;justify-content:space-between;align-items:center;}
+header img{max-height:150px;}
+nav a{margin-left:25px;text-decoration:none;color:var(--dark);font-weight:500;}
+.hero{background:var(--light);text-align:center;padding:100px 8%;}
+.hero h1{font-size:3rem;margin-bottom:15px;}
+.hero span{color:var(--primary);}
+.divider{width:70px;height:3px;background:var(--primary);margin:20px 0;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px;}
+.products-grid{grid-template-columns:repeat(3,1fr);}
+@media (max-width:900px){
+  .products-grid{grid-template-columns:repeat(2,1fr);}
+}
+@media (max-width:560px){
+  .products-grid{grid-template-columns:1fr;}
+}
+.card{background:#fff;padding:25px;border:1px solid #eee;}
+.dark{background:#333;color:#fff;}
+.dark p{color:#ddd;}
+.team img{width:100%;max-width:180px;margin-bottom:15px;}
+footer{background:#111;color:#bbb;padding:40px 8%;text-align:center;}
+/* Social icons for contact */
+.social-icons{margin-top:12px;display:flex;gap:12px;align-items:center;}
+.social-icons a{display:inline-flex;width:44px;height:44px;background:#fff;border:1px solid #eee;border-radius:8px;align-items:center;justify-content:center;color:var(--dark);text-decoration:none;transition:transform .12s,background .12s;color:var(--dark);}
+.social-icons a:hover{transform:translateY(-3px);background:var(--primary);color:#fff}
+.social-icons svg{width:22px;height:22px;fill:currentColor}
+/* Modal / gallery styles */
+.modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.6);z-index:120;opacity:0;pointer-events:none;transition:opacity .12s}
+.modal.open{opacity:1;pointer-events:auto}
+.modal-content{background:#fff;max-width:880px;width:92%;max-height:86vh;border-radius:8px;overflow:hidden;display:flex;flex-direction:column}
+.modal-header{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;border-bottom:1px solid #eee}
+.modal-body{padding:12px;background:#f8f8f8;display:flex;align-items:center;justify-content:center;min-height:320px}
+.modal-body img{max-width:100%;max-height:70vh;border-radius:4px}
+.modal-controls{display:flex;gap:8px}
+.thumbs{display:flex;gap:8px;padding:12px;overflow-x:auto;background:#fff}
+.thumbs img{height:64px;border-radius:4px;cursor:pointer;border:2px solid transparent}
+.thumbs img.active{border-color:var(--primary)}
+.card.clickable{cursor:pointer}
+</style>
+</head>
+<body>
+
+<header>
+  <img src="logo.png" alt="Radiant Labels & Packaging">
+  <nav>
+    <a href="#about">About</a>
+    <a href="#mission">Mission & Vision</a>
+    <a href="#products">Products</a>
+    <a href="#team">Organization</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Radiant <span>Labels & Packaging</span></h1>
+  <p1>Premium labeling and packaging solutions for apparel and lifestyle brands.</p1>
+</section>
+
+<section id="about">
+  <h2>About Us</h2>
+  <div class="divider"></div>
+  <p>We are a dedicated label and packaging solutions provider, offering end-to-end branding support for apparel and lifestyle brands. We have been providing these services since ___, delivering reliable and consistent solutions that help our customers strengthen their brand identity.<p></p>
+
+  <p>Our product portfolio includes woven labels, printed labels, hang tags, stickers, and customized packaging solutions, developed to meet diverse design, quality, and compliance requirements. We work closely with our clients to understand their expectations and ensure every product aligns with their brand standards, timelines, and cost targets.<p></p>
+
+  <p>Quality and customer satisfaction are at the core of our operations. Our processes are designed to deliver durable, high-quality, and aesthetically refined products. With a customer-centric approach, flexible MOQs, and competitive pricing, we aim to build long-term partnerships by providing value-driven labeling and packaging solutions.</p>
+</section>
+
+<section id="mission" class="dark">
+  <h2>Mission & Vision</h2>
+  <div class="divider"></div>
+  <div class="grid products-grid">
+    <div><h3>Mission</h3><p>To grow from a strong domestic label and packaging partner into a globally recognized company, operating at international quality and compliance standards.<p></p> To be known for delivering premium labeling and packaging solutions that enhance brand value and meet global market expectations.</p></div>
+    <div><h3>Vision</h3><p>To consistently manufacture premium-quality labels and packaging products by adopting international best practices, advanced materials, and strict quality controls.
+  <p></p>To strengthen our capabilities and processes to serve international customers, while building long-term relationships through reliability, transparency, and customer-focused service.
+</p></div>
+  </div>
+</section>
+
+<section id="products">
+  <h2>Our Products</h2>
+  <div class="divider"></div>
+  <div class="grid">
+    <div class="card clickable" data-product="woven-labels">Woven labels</div>
+    <div class="card clickable" data-product="woven-badges">Woven badges</div>
+    <div class="card clickable" data-product="printed-care-labels">Printed care labels</div>
+    <div class="card clickable" data-product="hang-tag">Hang Tag</div>
+    <div class="card clickable" data-product="heat-transfer-labels">Heat transfer labels</div>
+    <div class="card clickable" data-product="paper-boards-boxes">Paper boards Boxes</div>
+  </div>
+</section>
+
+<section id="team">
+  <h2>The Organization</h2>
+  <div class="divider"></div>
+  <div class="grid team">
+    <div><img src="placeholder.png"><h4>Ranganathan</h4><p>Chief Operation Officer</p></div>
+    <div><img src="placeholder.png"><h4>Benjamin Wilson</h4><p>General Manager</p></div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="divider"></div>
+  <p>Tirupur | +91 97890 66552 | radiantlabels@gmail.com</p>
+  <div class="social-icons">
+    <a href="https://www.instagram.com/_navadheesan_14/?hl=en" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="2" y="2" width="20" height="20" rx="6" ry="6" fill="none" stroke="currentColor" stroke-width="1.4"/>
+        <circle cx="12" cy="12" r="3.2" fill="none" stroke="currentColor" stroke-width="1.4"/>
+        <circle cx="17.6" cy="6.4" r="0.8" fill="currentColor"/>
+      </svg>
+    </a>
+    <a href="https://www.linkedin.com/in/navadheesan-r/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="2" y="3" width="20" height="18" rx="2" ry="2" fill="none" stroke="currentColor" stroke-width="1.4"/>
+        <circle cx="7" cy="7.5" r="1" fill="currentColor"/>
+        <path d="M7 10v7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+        <path d="M11 10v7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+        <path d="M11 13.5c1.2 0 2.5-.6 2.5-1.8V10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+      </svg>
+    </a>
+  </div>
+</section>
+
+<footer>© 2025 Radiant Labels & Packaging</footer>
+
+<!-- Gallery modal (populated via JS). Place images under assets/images/products/ following the naming convention described in README comment. -->
+<div id="gallery-modal" class="modal" aria-hidden="true" style="display:none">
+  <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-header">
+      <div id="modal-title">Gallery</div>
+      <div class="modal-controls">
+        <button id="prev-btn" aria-label="Previous">◀</button>
+        <button id="next-btn" aria-label="Next">▶</button>
+        <button id="close-btn" aria-label="Close">✕</button>
+      </div>
+    </div>
+    <div class="modal-body">
+      <img id="modal-image" src="" alt="">
+    </div>
+    <div class="thumbs" id="modal-thumbs" aria-hidden="false"></div>
+  </div>
+</div>
+
+<script>
+// Product -> images mapping using local paths. Add your images to assets/images/products/
+// Filenames should follow: <product-key>-1.jpg, <product-key>-2.jpg, ...
+const productImages = {
+  'woven-labels': [
+    'assets/images/products/woven-labels-1.png.png',
+    'assets/images/products/woven-labels-2.webp',
+    'assets/images/products/woven-labels-3.jpg'
+  ],
+  'woven-badges': [
+    'assets/images/products/woven-badges-1.jpg',
+    'assets/images/products/woven-badges-2.jpg'
+  ],
+  'printed-care-labels': [
+    'assets/images/products/printed-care-labels-1.jpg',
+    'assets/images/products/printed-care-labels-2.jpg'
+  ],
+  'hang-tag': [
+    'assets/images/products/hang-tag-1.jpg',
+    'assets/images/products/hang-tag-2.jpg'
+  ],
+  'heat-transfer-labels': [
+    'assets/images/products/heat-transfer-labels-1.jpg',
+    'assets/images/products/heat-transfer-labels-2.jpg'
+  ],
+  'paper-boards-boxes': [
+    'assets/images/products/paper-boards-boxes-1.jpg',
+    'assets/images/products/paper-boards-boxes-2.jpg'
+  ]
+};
+
+const productTitles = {
+  'woven-labels':'Woven labels',
+  'woven-badges':'Woven badges',
+  'printed-care-labels':'Printed care labels',
+  'hang-tag':'Hang Tag',
+  'heat-transfer-labels':'Heat transfer labels',
+  'paper-boards-boxes':'Paper boards Boxes'
+};
+
+// Minimal modal logic (re-usable, no dependencies). Initialize after DOM ready to ensure handlers attach.
+document.addEventListener('DOMContentLoaded', ()=>{
+  console.log('Gallery init');
+  function $(sel){return document.querySelector(sel)}
+  const modal = $('#gallery-modal');
+  const modalImage = $('#modal-image');
+  const modalTitle = $('#modal-title');
+  const modalThumbs = $('#modal-thumbs');
+  const prevBtn = $('#prev-btn');
+  const nextBtn = $('#next-btn');
+  const closeBtn = $('#close-btn');
+  let currentProduct = null; let currentIndex = 0;
+
+  function openModal(productKey){
+    const imgs = productImages[productKey] || [];
+    if(!imgs.length) return;
+    currentProduct = productKey; currentIndex = 0;
+    modalTitle.textContent = productTitles[productKey] || 'Gallery';
+    modal.style.display = 'flex'; modal.classList.add('open'); modal.setAttribute('aria-hidden','false');
+    renderImage(); renderThumbs();
+  }
+  function closeModal(){ modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); modal.style.display='none'; currentProduct=null }
+  function renderImage(){ const imgs = productImages[currentProduct]; modalImage.src = imgs[currentIndex]; modalImage.alt = `${productTitles[currentProduct]} ${currentIndex+1}`; Array.from(modalThumbs.children).forEach((t,i)=>t.classList.toggle('active', i===currentIndex)); }
+  function renderThumbs(){ modalThumbs.innerHTML=''; const imgs = productImages[currentProduct]; imgs.forEach((u,i)=>{ const img=document.createElement('img'); img.src=u; img.alt=`${productTitles[currentProduct]} ${i+1}`; img.addEventListener('click', ()=>{ currentIndex=i; renderImage() }); if(i===currentIndex) img.classList.add('active'); modalThumbs.appendChild(img); }) }
+  prevBtn.addEventListener('click', ()=>{ const imgs = productImages[currentProduct]; if(!imgs) return; currentIndex = (currentIndex - 1 + imgs.length) % imgs.length; renderImage(); });
+  nextBtn.addEventListener('click', ()=>{ const imgs = productImages[currentProduct]; if(!imgs) return; currentIndex = (currentIndex + 1) % imgs.length; renderImage(); });
+  closeBtn.addEventListener('click', closeModal);
+  modal.addEventListener('click', (e)=>{ if(e.target===modal) closeModal(); });
+  document.addEventListener('keydown', (e)=>{ if(modal.classList.contains('open')){ if(e.key==='Escape') closeModal(); if(e.key==='ArrowLeft') prevBtn.click(); if(e.key==='ArrowRight') nextBtn.click(); } });
+  document.querySelectorAll('.card.clickable[data-product]').forEach(el=>{ el.addEventListener('click', ()=> openModal(el.dataset.product)); el.addEventListener('keypress', (e)=>{ if(e.key==='Enter' || e.key===' ') openModal(el.dataset.product); }); });
+});
+</script>
+
+</body>
+</html>
